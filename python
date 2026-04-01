@@ -1,7 +1,7 @@
 # Just needed in case you'd like to append it to an array
 data = []
  for filename in os.listdir("."):
-    if filename.endswith("jpg"): 
+    if filename.endswith("png"): 
        # Your code comes here such as 
         print(filename)
         data.append(filename)
@@ -24,7 +24,7 @@ for Breast_name,images in Breast_images_dict.items():
         resized.append(resized_image)
         labels.append(keys.index(Breast_name))
 #resizing and creating labels using computer vision
-resized,labels=[],[]
+resized,labels=[],
 for Breast_name,images in Breast_images_dict.items():
     for image in images:
         print("hi")
@@ -43,7 +43,7 @@ model=models.Sequential([
     layers.Flatten(),
     layers.Dense(128,activation="relu"),
     layers.Dense(64,activation="relu"),
-yers.Dense(2,activation="softmax")])
+layers.Dense(2,activation="softmax")])
 model.compile(
 optimizer="adam",loss="sparse_categorical_crossentropy",metrics=["accuracy"])
 myCNN=tf.keras.models.Sequential([
